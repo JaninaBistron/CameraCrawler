@@ -1,0 +1,85 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-spinner {
+  --color: #54dc98;
+}
+
+.range-container {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-label {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.right-label {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Pin-Größe und Aussehen ändern */
+ion-range::part(pin) {
+  width: 40px; /* Breite der Blase */
+  height: 40px; /* Höhe der Blase */
+  font-size: 16px; /* Schriftgröße im Pin */
+  border-radius: 50%; /* Runde Blase */
+  background-color: #3880ff; /* Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Flexbox Container for all elements
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.lightblue {
+  background-color: #a0d3e7;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+}
+
+ion-button {
+  --background: #e20004;
+  
+}
