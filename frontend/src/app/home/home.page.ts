@@ -11,7 +11,7 @@ export class HomePage {
 
   // function: returning value of ion-range including € symbol
   pinFormatter(value: number) {
-    return `${value} €`;
+    return `${value}€`;
   }
   
 

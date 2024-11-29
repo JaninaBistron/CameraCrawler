@@ -1,53 +1,100 @@
-// Individual ion-range styles 
+// -------------------- FONTS --------------------
+// common rule for fonts
+$font-primary: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+$font-headline: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$font-size-large: x-large;
+$font-size-medium: large;
 
-ion-range::part(tick) {
-  background: #a2d2ff;
+// primary font
+#headline, #subheadline, #budget, #infotext {
+  font-family: $font-primary;
 }
 
-ion-range::part(tick-active) {
-  background: #bde0fe;
+// id for headline "Kleinanzeigen"
+#headline {
+  font-family: $font-headline;
+  font-size: $font-size-large;
+  margin: 0;
 }
 
+// id for subheadline "Camera Crawler" and budget "Your Budget"
+#subheadline, #budget {
+  font-size: $font-size-large;
+}
+
+// id for info box text
+#infotext {
+  font-size: $font-size-medium;
+  font-weight: bold;
+
+}
+
+// id for info box text and budget
+#infotext, #budget {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+// display kleinanzeigen.de as italic
+#infotext i {
+  font-style: italic;
+  font-weight: normal;
+}
+
+// -------------------- RANGE PIN --------------------
+// Individual style for ion-range pin
 ion-range::part(pin) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  background: #ffafcc;
-  color: #fff;
+  background: #a0d3e7;
+  color: black;
 
   border-radius: 50%;
-  transform: scale(1.01);
+  transform: scale(1.21);
 
-  top: -20px;
-
-  min-width: 28px;
-  height: 28px;
-  transition: transform 120ms ease, background 120ms ease;
+  top: -2em;
 }
 
+// Remove default pin
 ion-range::part(pin)::before {
   content: none;
 }
 
+// Set brackground for new pin
 ion-range::part(knob) {
-  background: #ffc8dd;
+  background: black;
 }
 
+// Set background for range bar
 ion-range::part(bar) {
-  background: #a2d2ff;
+  background: #a0d3e7;
 }
 
+// Set brackground for active range bar
 ion-range::part(bar-active) {
-  background: #bde0fe;
+  background: #e20004;
 }
 
+// -------------------- FLEX BOX --------------------
 // Flexbox Container for all elements
 .flex-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
+.flexbox-top-lightblue,
+.flexbox-input,
+.flexbox-range,
+.flexbox-button,
+.flexbox-info,
+.love-info {
+  text-align: center;
+}
+
+// Camera icon, header, subheader and blue background 
 .flexbox-top-lightblue {
   display: grid;
   place-items: center;
@@ -56,32 +103,29 @@ ion-range::part(bar-active) {
   height: 14em;
 }
 
+// Input field for camera search
 .flexbox-input {
   width: 60%; 
   margin: 3em;
-  text-align: center;
   align-self: center;
   line-height: 10em;
 }
 
+// Range area
 .flexbox-range {
   width: 75%;
-  text-align: center;
   align-self: center;
 }
 
 .flexbox-range ion-range {
-  --bar-background: #a0d3e7;
-  --bar-background-active: black; 
   --bar-height: 0.8em;
   --bar-border-radius: 10em;
-  --knob-size: 1.8em;
+  --knob-size: 2.5em;
 }
 
 .flexbox-button {
-  text-align: center;
   align-self: center;
-  margin: 10em;
+  margin: 3em;
 }
 
 .flexbox-info {
@@ -89,42 +133,39 @@ ion-range::part(bar-active) {
   place-items: center;
   background-color: #a0d3e7;
   border-radius: 1em;
-  width: 50%;
-  height: 20em;
-  margin: 10px;
-  text-align: center;
+  width: 60%;
+  height: 10em;
   align-self: center;
-  line-height: 2em;
 }
 
-#headline {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: x-large;
-  margin-bottom: 0;
-  margin-top: 0;
+.love-info {
+  align-self: center;
+  margin-top: 4em;
 }
 
-#subheadline {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
-  font-size: x-large;
-}
-
-p {
-  text-align: center;
-}
-
+// Individual color for ion button
 ion-button {
   --background: #e20004;
 }
 
-ion-spinner {
-  --color: #54dc98;
-}
-
+// Individual style for camera icon
 ion-icon[name="camera-outline"] {
   font-size: 6em;
 }
 
+// Margin for diamond icon
+ion-icon[name="cash-outline"] {
+  padding-right: 0.5em;
+}
+
+// Margin for diamond icon
+ion-icon[name="information-circle-outline"] {
+  color: white;
+  font-size: 2em;
+  margin-top: 0.5em;
+}
+
+// Individual highlight color for ion input
 ion-input {
   --highlight-color: #a0d3e7;
 }

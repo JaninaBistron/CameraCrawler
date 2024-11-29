@@ -1,12 +1,3 @@
-<!-- Header -->
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-         <!-- TITLE OR MENU HERE -->
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <!-- Main content -->
 <ion-content [fullscreen]="true">
   
@@ -26,51 +17,31 @@
     </div>
 
     <!-- div 3: range area -->
-    <p><b>Your Budget</b></p>
+    <p id="budget">Your Budget</p>
     <div class="flexbox-range">
-      
-      <ion-range 
-        aria-label="custom-label"
-        [min]="0" 
-        [max]="5000"
-        [value]="100"
-        [pin]="true"
-        [ticks]="true"
-        [pinFormatter]="pinFormatter">
-        <!-- pinFormatter ensures that current value & € symbol is returned -->
 
+      <!-- pinFormatter ensures that current value and € symbol is returned -->
+      <ion-range aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter">
         <ion-icon slot="start" name="cash-outline"></ion-icon>
         <ion-icon slot="end" name="diamond-outline"></ion-icon>
-        
       </ion-range>
     </div>
 
-    <!-- div 4 -->
+    <!-- div 4: crawl button -->
     <div class="flexbox-button">
       <ion-button>Let's crawl!</ion-button>
     </div>
 
-    <!-- div 5 -->
+    <!-- div 5: info-box -->
     <div class="flexbox-info">
-      This little crawler finds all cameras on <i>Kleinanzeigen.de</i> within your budget and checks the product description for shutter counts, camera condition and extras.
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <p id="infotext">This little crawler finds all cameras on <i>Kleinanzeigen.de</i> within your budget and checks the product description for shutter counts, camera condition and extras.</p>
     </div>
 
-    <!-- 
-    <div>
-      Div 6 - Spinner für später
-
-      <ion-item>
-        <ion-spinner name="lines"></ion-spinner>
-      </ion-item>
+    <!-- div 6: love-box -->
+    <div class="love-info">
+      Made with &hearts; by AI
     </div>
-    -->
 
   </div>
-
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title> Made with Heart by AI </ion-title>
-    </ion-toolbar>
-  </ion-footer>
-
 </ion-content>
