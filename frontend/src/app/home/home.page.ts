@@ -9,10 +9,9 @@ export class HomePage {
 
   constructor() {}
 
-  budgetValue: number = 0;
-
+  // function: returning value of ion-range including € symbol
   pinFormatter(value: number) {
-    return `${value}€`;
+    return `${value} €`;
   }
   
 

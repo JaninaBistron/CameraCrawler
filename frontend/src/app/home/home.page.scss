@@ -1,68 +1,45 @@
-#container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 70%;
+// Individual ion-range styles 
+
+ion-range::part(tick) {
+  background: #a2d2ff;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-range::part(tick-active) {
+  background: #bde0fe;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-ion-spinner {
-  --color: #54dc98;
-}
-
-.range-container {
-  position: relative;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-label {
-  position: absolute;
-  top: -25px;
-  left: 0;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.right-label {
-  position: absolute;
-  top: -25px;
-  right: 0;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* Pin-Größe und Aussehen ändern */
 ion-range::part(pin) {
-  width: 40px; /* Breite der Blase */
-  height: 40px; /* Höhe der Blase */
-  font-size: 16px; /* Schriftgröße im Pin */
-  border-radius: 50%; /* Runde Blase */
-  background-color: #3880ff; /* Hintergrundfarbe */
-  color: white; /* Textfarbe */
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+
+  background: #ffafcc;
+  color: #fff;
+
+  border-radius: 50%;
+  transform: scale(1.01);
+
+  top: -20px;
+
+  min-width: 28px;
+  height: 28px;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+ion-range::part(pin)::before {
+  content: none;
+}
+
+ion-range::part(knob) {
+  background: #ffc8dd;
+}
+
+ion-range::part(bar) {
+  background: #a2d2ff;
+}
+
+ion-range::part(bar-active) {
+  background: #bde0fe;
 }
 
 // Flexbox Container for all elements
@@ -71,15 +48,83 @@ ion-range::part(pin) {
   flex-direction: column;
 }
 
-.lightblue {
+.flexbox-top-lightblue {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to bottom, white 24%, #a0d3e7 24%);
+  width: 100%;
+  height: 14em;
+}
+
+.flexbox-input {
+  width: 60%; 
+  margin: 3em;
+  text-align: center;
+  align-self: center;
+  line-height: 10em;
+}
+
+.flexbox-range {
+  width: 75%;
+  text-align: center;
+  align-self: center;
+}
+
+.flexbox-range ion-range {
+  --bar-background: #a0d3e7;
+  --bar-background-active: black; 
+  --bar-height: 0.8em;
+  --bar-border-radius: 10em;
+  --knob-size: 1.8em;
+}
+
+.flexbox-button {
+  text-align: center;
+  align-self: center;
+  margin: 10em;
+}
+
+.flexbox-info {
+  display: grid;
+  place-items: center;
   background-color: #a0d3e7;
-  width: auto;
+  border-radius: 1em;
+  width: 50%;
+  height: 20em;
   margin: 10px;
   text-align: center;
-  line-height: 75px;
+  align-self: center;
+  line-height: 2em;
+}
+
+#headline {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: x-large;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#subheadline {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+}
+
+p {
+  text-align: center;
 }
 
 ion-button {
   --background: #e20004;
-  
+}
+
+ion-spinner {
+  --color: #54dc98;
+}
+
+ion-icon[name="camera-outline"] {
+  font-size: 6em;
+}
+
+ion-input {
+  --highlight-color: #a0d3e7;
 }
