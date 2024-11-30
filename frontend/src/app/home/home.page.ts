@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  // function: returning value of ion-range including € symbol
+  // Routing to go to result page
+  navigateToResult() {
+    this.router.navigate(['/result'])
+  }
+
+  // Function: returning value of ion-range including € symbol
   pinFormatter(value: number) {
     return `${value}€`;
   }
   
-
 }

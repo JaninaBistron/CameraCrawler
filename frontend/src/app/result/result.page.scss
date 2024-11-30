@@ -1,0 +1,110 @@
+// -------------------- FONTS --------------------
+// common rule for fonts
+$font-primary: 'Nunito', 'Arial', 'sans-serif';
+$font-headline: 'Noteworthy', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif';
+$font-size-xx-large: xx-large;
+$font-size-x-large: x-large;
+$font-size-medium: large;
+
+// primary font
+#headline, #subheadline {
+  font-family: $font-primary;
+}
+
+// id for headline "Kleinanzeigen"
+#headline {
+  font-family: $font-headline;
+  font-size: $font-size-xx-large;
+  margin: 0;
+  font-weight: bold;
+}
+
+// id for subheadline "Camera Crawler" and budget "Your Budget"
+#subheadline {
+  font-size: $font-size-x-large;
+}
+
+// -------------------- FLEX BOX --------------------
+// Flexbox Container for all elements
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.flexbox-top-lightblue,
+.flexbox-input,
+.flexbox-button,
+.love-info {
+  text-align: center;
+}
+
+// Camera icon, header, subheader and blue background 
+.flexbox-top-lightblue {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to bottom, white 23%, #a0d3e7 23%);
+  width: 100%;
+  height: 14em;
+}
+
+// Input field for camera search
+.flexbox-input {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 60%; 
+  margin-top: 3em;
+  align-self: center;
+  line-height: 5em;
+}
+
+.flexbox-button {
+  align-self: center;
+  margin: 3em;
+}
+
+.love-info {
+  align-self: center;
+  
+}
+
+// Individual color for ion button
+ion-button {
+  --background: #e20004;
+}
+
+ion-button:hover {
+  --background: black;
+}
+
+// Individual style for camera icon
+ion-icon[name="camera-outline"] {
+  font-size: 6em;
+}
+
+// Margin for diamond icon
+ion-icon[name="information-circle-outline"] {
+  color: white;
+  font-size: 2em;
+  margin-top: 0.2em;
+}
+
+// Individual highlight color for ion input
+ion-input {
+  --highlight-color: #a0d3e7;
+}
+
+ion-card {
+  background: #d6edf5;
+  width: 60%;
+  margin: 2em auto;
+} 
+
+.tags {
+  margin-top: 1em;
+}
+
+.card-icons {
+  
+}
