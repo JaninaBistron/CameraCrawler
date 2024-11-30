@@ -1,0 +1,79 @@
+<!-- Main content -->
+<ion-content [fullscreen]="true">
+
+<!-- Flexbox for all elements -->
+<div class="flex-container">  
+  
+  <!-- div 1: icon, header, subheader and blue background -->
+  <div class="flexbox-top-lightblue">
+    <ion-icon name="camera-outline"></ion-icon>
+    <p id="headline">Kleinanzeigen</p> 
+    <p id="subheadline">Camera Crawler</p>
+  </div>
+
+  <!-- div 2: input field for camera search -->
+  <div class="flexbox-input">
+    <ion-input label="Search Camera" label-placement="floating" fill="outline" placeholder="Enter Camera Name" clearInput="true"></ion-input>
+    <ion-button (click)="navigateToHome()"><ion-icon name="create-outline"></ion-icon></ion-button>
+  </div>
+
+  <div>
+    <!-- Card 1 -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Title: Nikon</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content> 
+        Card Content 
+        <div class="tags">
+          <ion-chip color="primary">
+            <ion-label>4K</ion-label>
+          </ion-chip>
+          <ion-chip color="success">
+            <ion-label>NEW</ion-label>
+          </ion-chip>
+          <ion-chip color="tertiary">
+            <ion-label>Shutter: 3.500</ion-label>
+          </ion-chip>
+          <ion-chip color="danger">
+            <ion-label>Online: 4 Weeks</ion-label>
+          </ion-chip>
+        </div>
+      </ion-card-content>
+        <div class="card-icons">
+          <ion-icon name="heart-outline"></ion-icon><ion-icon name="exit-outline"></ion-icon>
+        </div>
+    </ion-card>
+ 
+    <!-- Card 2 -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Title: Sony</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content> Card Content </ion-card-content>
+      <ion-icon name="heart-outline"></ion-icon><ion-icon name="exit-outline"></ion-icon>
+    </ion-card>
+
+    <!-- Card 3 -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Title: Canon</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content> Card Content </ion-card-content>
+      <ion-icon name="heart-outline"></ion-icon><ion-icon name="exit-outline"></ion-icon>
+    </ion-card>
+  </div>
+
+  <!-- div 6: love-box -->
+  <div class="love-info">
+    Made with &hearts; by AI
+  </div>
+
+</div>
+</ion-content>

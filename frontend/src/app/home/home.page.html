@@ -1,78 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Header - Camera Picure 
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<!-- Main content -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Toolbar</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  
   <!-- Flexbox for all elements -->
   <div class="flex-container">  
-    <div class="lightblue">
-      Div 1 - Kleinanzeigen Camera Crawler
+    
+    <!-- div 1: icon, header, subheader and blue background -->
+    <div class="flexbox-top-lightblue">
+        <ion-icon name="camera-outline"></ion-icon>
+        <p id="headline">Kleinanzeigen</p> 
+        <p id="subheadline">Camera Crawler</p>
     </div>
 
-    <div>
-      <ion-input label="Search Camera" label-placement="floating" fill="outline" placeholder="Enter Camera Specs"></ion-input>
+    <!-- div 2: input field for camera search -->
+    <div class="flexbox-input">
+      <ion-input label="Search Camera" label-placement="floating" fill="outline" placeholder="Enter Camera Name" clearInput="true"></ion-input>
     </div>
 
-    <div>
-      <!-- Container for Range and Labels -->
-      <div>
-        <!-- Label for "Your Budget" -->
-        <span class="left-label">Your Budget</span>
-  
-          <!-- Der ion-range Schieberegler -->
-          <ion-range 
-            [min]="0" 
-            [max]="5000" 
-            [step]="100" 
-            [snaps]="true" 
-            [(ngModel)]="budgetValue" 
-            [pin]="true">
-          
-            <ion-label slot="start">0€</ion-label>
-            <ion-label slot="end">5000€</ion-label>
+    <!-- div 3: range area -->
+    <p id="budget">Your Budget</p>
+    <div class="flexbox-range">
 
-            <ion-icon slot="pin" name="cash-outline"></ion-icon>
-          </ion-range>
-  
-          <!-- Label für "0 - 5000€" oben rechts -->
-          <span class="right-label">0 - 5000€</span>
-        </div>
+      <!-- pinFormatter ensures that current value and € symbol is returned -->
+      <ion-range aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter">
+        <ion-icon slot="start" name="cash-outline"></ion-icon>
+        <ion-icon slot="end" name="diamond-outline"></ion-icon>
+      </ion-range>
     </div>
 
-    <div>
-      <ion-button>Default</ion-button>
+    <!-- div 4: crawl button -->
+    <div class="flexbox-button">
+      <ion-button (click)="navigateToResult()">Let's crawl!</ion-button>
     </div>
 
-    <div class="lightblue">
-      Div 5 - Infobox
+    <!-- div 5: info-box -->
+    <div class="flexbox-info">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <p id="infotext">This little crawler finds all cameras on <i>Kleinanzeigen.de</i> within your budget and checks the product description for shutter counts, camera condition and extras.</p>
     </div>
 
-    <!-- 
-    <div>
-      Div 6 - Spinner für später
-
-      <ion-item>
-        <ion-spinner name="lines"></ion-spinner>
-      </ion-item>
+    <!-- div 6: love-box -->
+    <div class="love-info">
+      Made with &hearts; by AI
     </div>
-    -->
 
   </div>
-
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title> Made with Heart by AI </ion-title>
-    </ion-toolbar>
-  </ion-footer>
-
 </ion-content>

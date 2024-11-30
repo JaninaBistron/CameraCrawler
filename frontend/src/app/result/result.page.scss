@@ -7,7 +7,7 @@ $font-size-x-large: x-large;
 $font-size-medium: large;
 
 // primary font
-#headline, #subheadline, #budget, #infotext {
+#headline, #subheadline {
   font-family: $font-primary;
 }
 
@@ -20,62 +20,8 @@ $font-size-medium: large;
 }
 
 // id for subheadline "Camera Crawler" and budget "Your Budget"
-#subheadline, #budget {
+#subheadline {
   font-size: $font-size-x-large;
-}
-
-// id for info box text
-#infotext {
-  font-size: $font-size-medium;
-  margin: 0.5em;
-}
-
-// id for info box text and budget
-#infotext, #budget {
-  margin-bottom: 0.5em;
-  margin-top: 0;
-}
-
-// display kleinanzeigen.de as italic
-#infotext i {
-  font-style: italic;
-  font-weight: normal;
-}
-
-// -------------------- RANGE PIN --------------------
-// Individual style for ion-range pin
-ion-range::part(pin) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #a0d3e7;
-  color: black;
-
-  border-radius: 50%;
-  transform: scale(1.21);
-
-  top: -2em;
-}
-
-// Remove default pin
-ion-range::part(pin)::before {
-  content: none;
-}
-
-// Set brackground for new pin
-ion-range::part(knob) {
-  background: black;
-}
-
-// Set background for range bar
-ion-range::part(bar) {
-  background: #a0d3e7;
-}
-
-// Set brackground for active range bar
-ion-range::part(bar-active) {
-  background: #e20004;
 }
 
 // -------------------- FLEX BOX --------------------
@@ -88,9 +34,7 @@ ion-range::part(bar-active) {
 
 .flexbox-top-lightblue,
 .flexbox-input,
-.flexbox-range,
 .flexbox-button,
-.flexbox-info,
 .love-info {
   text-align: center;
 }
@@ -106,22 +50,13 @@ ion-range::part(bar-active) {
 
 // Input field for camera search
 .flexbox-input {
+  display: flex;
+  align-items: center;
+  gap: 1em;
   width: 60%; 
-  margin: 3em;
+  margin-top: 3em;
   align-self: center;
-  line-height: 10em;
-}
-
-// Range area
-.flexbox-range {
-  width: 75%;
-  align-self: center;
-}
-
-.flexbox-range ion-range {
-  --bar-height: 0.8em;
-  --bar-border-radius: 10em;
-  --knob-size: 2.5em;
+  line-height: 5em;
 }
 
 .flexbox-button {
@@ -129,19 +64,9 @@ ion-range::part(bar-active) {
   margin: 3em;
 }
 
-.flexbox-info {
-  display: grid;
-  place-items: center;
-  background-color: #a0d3e7;
-  border-radius: 1em;
-  width: 60%;
-  height: 12em;
-  align-self: center;
-}
-
 .love-info {
   align-self: center;
-  margin-top: 3em;
+  
 }
 
 // Individual color for ion button
@@ -159,11 +84,6 @@ ion-icon[name="camera-outline"] {
 }
 
 // Margin for diamond icon
-ion-icon[name="cash-outline"] {
-  padding-right: 0.5em;
-}
-
-// Margin for diamond icon
 ion-icon[name="information-circle-outline"] {
   color: white;
   font-size: 2em;
@@ -173,4 +93,18 @@ ion-icon[name="information-circle-outline"] {
 // Individual highlight color for ion input
 ion-input {
   --highlight-color: #a0d3e7;
+}
+
+ion-card {
+  background: #d6edf5;
+  width: 60%;
+  margin: 2em auto;
+} 
+
+.tags {
+  margin-top: 1em;
+}
+
+.card-icons {
+  
 }
